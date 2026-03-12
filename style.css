@@ -597,6 +597,10 @@ a.about-btn {
   font-weight: 400;
 }
 
+.section-header .see-all:hover {
+  color: var(--accent-hover);
+}
+
 /* App List (like App Store rows) */
 .app-list {
   display: grid;

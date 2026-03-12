@@ -242,9 +242,9 @@
     const apps = data.apps;
     const featuredList = Array.isArray(data.featured) ? data.featured : [data.featured];
 
-    const macosApps = apps.filter((a) => a.category.includes("macos"));
-    const devApps = apps.filter((a) => a.category.includes("developer-tools"));
-    const gameApps = apps.filter((a) => a.category.includes("games"));
+    const activeCats = (data.categories || [])
+      .filter((c) => c.id !== "all")
+      .filter((c) => apps.some((a) => a.category && a.category.includes(c.id)));
 
     const dots = featuredList.length > 1
       ? `<div class="carousel-dots">${featuredList.map((_, i) => `<button class="carousel-dot${i === 0 ? " active" : ""}" data-slide="${i}"></button>`).join("")}</div>`
@@ -276,35 +276,20 @@
         </div>
       </div>
 
-      ${macosApps.length > 0 ? `
+      ${activeCats.map((cat) => {
+        const catApps = apps.filter((a) => a.category && a.category.includes(cat.id));
+        const showAll = catApps.length > 6;
+        return `
       <div class="section">
         <div class="section-header">
-          <h2>macOS Apps</h2>
+          <h2>${cat.name}</h2>
+          ${showAll ? `<span class="see-all" data-view="${cat.id}">See All</span>` : ""}
         </div>
         <div class="app-list">
-          ${macosApps.map((a) => appRow(a)).join("")}
+          ${catApps.slice(0, 6).map((a) => appRow(a)).join("")}
         </div>
-      </div>` : ""}
-
-      ${devApps.length > 0 ? `
-      <div class="section">
-        <div class="section-header">
-          <h2>Developer Tools</h2>
-        </div>
-        <div class="app-list">
-          ${devApps.map((a) => appRow(a)).join("")}
-        </div>
-      </div>` : ""}
-
-      ${gameApps.length > 0 ? `
-      <div class="section">
-        <div class="section-header">
-          <h2>Games</h2>
-        </div>
-        <div class="app-list">
-          ${gameApps.map((a) => appRow(a)).join("")}
-        </div>
-      </div>` : ""}
+      </div>`;
+      }).join("")}
     `;
 
     return html;
@@ -698,6 +683,12 @@
       if (el.dataset.boundCopy) return;
       el.dataset.boundCopy = "1";
       el.addEventListener("click", () => copyToClipboard(el.dataset.copy));
+    });
+
+    $$(".see-all").forEach((el) => {
+      if (el.dataset.boundSeeAll) return;
+      el.dataset.boundSeeAll = "1";
+      el.addEventListener("click", () => navigate(el.dataset.view));
     });
 
     bindCarousel();
