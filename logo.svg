@@ -1,22 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
   <rect width="800" height="800" rx="179" fill="#7C3AED"/>
-  <g transform="translate(400 390)" stroke="#fff" fill="#fff">
-    <!-- Network nodes connected in a web — representing distributed stores -->
-    <!-- Center node -->
+  <g transform="translate(400 385) scale(1.6)" stroke="#fff" fill="#fff">
     <circle cx="0" cy="0" r="28"/>
-    <!-- Outer ring nodes -->
     <circle cx="0" cy="-155" r="22"/>
     <circle cx="-147" cy="-48" r="22"/>
     <circle cx="-91" cy="125" r="22"/>
     <circle cx="91" cy="125" r="22"/>
     <circle cx="147" cy="-48" r="22"/>
-    <!-- Inner connections (center to outer) -->
     <line x1="0" y1="0" x2="0" y2="-155" stroke-width="8" opacity="0.5"/>
     <line x1="0" y1="0" x2="-147" y2="-48" stroke-width="8" opacity="0.5"/>
     <line x1="0" y1="0" x2="-91" y2="125" stroke-width="8" opacity="0.5"/>
     <line x1="0" y1="0" x2="91" y2="125" stroke-width="8" opacity="0.5"/>
     <line x1="0" y1="0" x2="147" y2="-48" stroke-width="8" opacity="0.5"/>
-    <!-- Outer ring connections (pentagon) -->
     <line x1="0" y1="-155" x2="-147" y2="-48" stroke-width="6" opacity="0.3"/>
     <line x1="-147" y1="-48" x2="-91" y2="125" stroke-width="6" opacity="0.3"/>
     <line x1="-91" y1="125" x2="91" y2="125" stroke-width="6" opacity="0.3"/>
