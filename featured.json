@@ -1,5 +1,11 @@
 [
   {
+    "id": "dodopulse",
+    "headline": "FROM DODOAPPS",
+    "title": "Your Mac, at a glance.",
+    "subtitle": "Real-time CPU, memory, GPU, and network monitoring in your menu bar — with beautiful mini graphs."
+  },
+  {
     "id": "textream",
     "headline": "NEW APP",
     "title": "Your script, always in sight.",
@@ -10,5 +16,11 @@
     "headline": "151K+ STARS",
     "title": "The world's largest prompt collection.",
     "subtitle": "Share, discover, and collect AI prompts from the community. Free, open source, and self-hostable."
+  },
+  {
+    "id": "dodoshot",
+    "headline": "FREE ALTERNATIVE",
+    "title": "Screenshots, reimagined.",
+    "subtitle": "A beautiful, free screenshot tool for macOS — capture, annotate, and manage. Inspired by CleanShot X."
   }
 ]
