@@ -43,6 +43,7 @@
     shopping: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
     books: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
     medical: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>`,
+    stores: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
     github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>`,
   };
 
@@ -133,7 +134,9 @@
     const g = grads[index % grads.length];
     const hasScreenshot = app.screenshots && app.screenshots.length > 0;
     const screenshotImg = hasScreenshot
-      ? `<img class="card-screenshot" src="${app.screenshots[0]}" alt="${app.name}" loading="lazy">`
+      ? (app.screenshots[0].startsWith("https://github.com/user-attachments/assets/")
+        ? `<video class="card-screenshot" src="${app.screenshots[0]}" autoplay loop muted playsinline></video>`
+        : `<img class="card-screenshot" src="${app.screenshots[0]}" alt="${app.name}" loading="lazy">`)
       : "";
     return `
       <div class="card" data-app="${app.id}">
@@ -156,6 +159,7 @@
     const nav = $("#sidebarNav");
     const items = [
       { id: "discover", name: "Discover", icon: icons.discover },
+      { id: "stores", name: "Stores", icon: icons.stores },
     ];
 
     let html = "";
@@ -209,6 +213,30 @@
       </div>`;
   }
 
+  function pickMustTry(apps, count) {
+    const withScreenshots = apps.filter((a) => a.screenshots && a.screenshots.length > 0);
+    const without = apps.filter((a) => !a.screenshots || a.screenshots.length === 0);
+    const stores = [...new Set(withScreenshots.map((a) => a._source))];
+    const picked = [];
+    const usedIds = new Set();
+    stores.forEach((store) => {
+      const fromStore = withScreenshots.filter((a) => a._source === store && !usedIds.has(a.id));
+      if (fromStore.length > 0) {
+        picked.push(fromStore[0]);
+        usedIds.add(fromStore[0].id);
+      }
+    });
+    withScreenshots.forEach((a) => {
+      if (picked.length >= count) return;
+      if (!usedIds.has(a.id)) { picked.push(a); usedIds.add(a.id); }
+    });
+    without.forEach((a) => {
+      if (picked.length >= count) return;
+      if (!usedIds.has(a.id)) { picked.push(a); usedIds.add(a.id); }
+    });
+    return picked.slice(0, count);
+  }
+
   // Discover Page
   function renderDiscover() {
     const apps = data.apps;
@@ -244,7 +272,7 @@
           <h2>The Latest Must-Try Apps</h2>
         </div>
         <div class="cards-grid">
-          ${apps.slice(0, 4).map((a, i) => appCard(a, i)).join("")}
+          ${pickMustTry(apps, 4).map((a, i) => appCard(a, i)).join("")}
         </div>
       </div>
 
@@ -345,7 +373,10 @@
         <div class="detail-section">
           <h3>Preview</h3>
           <div class="screenshots-scroll">
-            ${app.screenshots.map((s) => `<img class="screenshot-img" src="${s}" alt="${app.name} screenshot" loading="lazy">`).join("")}
+            ${app.screenshots.map((s) => s.startsWith("https://github.com/user-attachments/assets/")
+              ? `<video class="screenshot-img" src="${s}" autoplay loop muted playsinline></video>`
+              : `<img class="screenshot-img" src="${s}" alt="${app.name} screenshot" loading="lazy">`
+            ).join("")}
           </div>
         </div>` : ""}
 
@@ -455,6 +486,55 @@
       </div>`;
   }
 
+  // Stores Page
+  function renderStores() {
+    if (storesData.length === 0) {
+      return `
+        <div class="page-header"><h1>Stores</h1></div>
+        <div class="empty-state">
+          <div class="empty-state-icon">🏪</div>
+          <h3>No stores yet</h3>
+          <p>Stores will appear here once the catalog is built.</p>
+        </div>`;
+    }
+
+    return `
+      <div class="page-header"><h1>Stores</h1></div>
+      <p style="color:var(--text-secondary);font-size:14px;margin-bottom:24px;line-height:1.5">
+        World Vibe Web aggregates apps from independent stores. Each store maintains its own <code style="font-size:12px;background:var(--bg-tertiary);padding:2px 6px;border-radius:4px">apps.json</code> and contributes to the unified catalog.
+      </p>
+      <div class="stores-list">
+        ${storesData.map((s) => {
+          const iconStack = (s.icons || []).slice(0, 4).map((ic, i) =>
+            `<img src="${ic.icon}" class="store-stack-icon" style="z-index:${4-i};margin-left:${i ? '-10px' : '0'};${ic.iconStyle && ic.iconStyle.borderRadius ? 'border-radius:'+ic.iconStyle.borderRadius : 'border-radius:22%'}" onerror="this.style.display='none'">`
+          ).join("");
+          const fallbackAvatar = !s.icons || s.icons.length === 0
+            ? `<div class="store-card-avatar-letter">${s.name.charAt(0).toUpperCase()}</div>` : "";
+          const isUrl = s.source.startsWith("http");
+          const sourceLink = isUrl ? s.source : `https://github.com/${s.source}`;
+          const sourceLabel = isUrl ? s.source.replace(/^https?:\/\//, "").replace(/\/+$/, "") : s.owner;
+          return `
+          <div class="store-card">
+            <div class="store-card-header">
+              <div class="store-icon-stack">${iconStack}${fallbackAvatar}</div>
+              <div class="store-card-info">
+                <div class="store-card-name">${s.name}</div>
+                <div class="store-card-developer">by ${s.developer}</div>
+              </div>
+            </div>
+            <div class="store-card-stats">
+              <div class="store-card-stat"><span class="store-stat-value">${s.appCount}</span><span class="store-stat-label">Apps</span></div>
+              <div class="store-card-stat"><span class="store-stat-value">${formatNumber(s.totalStars)}</span><span class="store-stat-label">Stars</span></div>
+            </div>
+            <div class="store-card-actions">
+              ${s.url ? `<a href="${s.url}" target="_blank" rel="noopener" class="store-card-btn primary">Visit Store</a>` : ""}
+              <a href="${sourceLink}" target="_blank" rel="noopener" class="store-card-btn secondary">${icons.github} View Repo</a>
+            </div>
+          </div>`;
+        }).join("")}
+      </div>`;
+  }
+
   // Router
   let suppressHash = false;
 
@@ -490,6 +570,10 @@
       currentApp = null;
       currentView = view;
       scroll.innerHTML = renderDiscover();
+    } else if (view === "stores") {
+      currentApp = null;
+      currentView = view;
+      scroll.innerHTML = renderStores();
     } else {
       currentApp = null;
       currentView = view;
@@ -696,11 +780,42 @@
     });
   }
 
+  let storesData = [];
+
   // Init
   async function init() {
     try {
-      const resp = await fetch("apps.json");
-      data = await resp.json();
+      const [appsResp, storesResp] = await Promise.all([
+        fetch("apps.json"),
+        fetch("stores.json").catch(() => null),
+      ]);
+      data = await appsResp.json();
+      if (storesResp && storesResp.ok) {
+        const rawStores = await storesResp.json();
+        const storeMap = {};
+        (data.apps || []).forEach((app) => {
+          if (!app._source) return;
+          const key = app._source;
+          if (!storeMap[key]) {
+            storeMap[key] = {
+              source: key,
+              name: app._store || key,
+              developer: app._developer || app._owner || "Unknown",
+              owner: app._owner || "",
+              url: app._storeUrl || "",
+              appCount: 0,
+              totalStars: 0,
+            };
+          }
+          storeMap[key].appCount++;
+          storeMap[key].totalStars += (app.stars || 0);
+          if (!storeMap[key].icons) storeMap[key].icons = [];
+          if (app.icon && storeMap[key].icons.length < 4) {
+            storeMap[key].icons.push({ icon: app.icon, iconStyle: app.iconStyle });
+          }
+        });
+        storesData = Object.values(storeMap);
+      }
     } catch {
       $("#contentScroll").innerHTML = `
         <div class="empty-state">

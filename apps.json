@@ -7,6 +7,12 @@
   },
   "featured": [
     {
+      "id": "dodopulse",
+      "headline": "FROM DODOAPPS",
+      "title": "Your Mac, at a glance.",
+      "subtitle": "Real-time CPU, memory, GPU, and network monitoring in your menu bar — with beautiful mini graphs."
+    },
+    {
       "id": "textream",
       "headline": "NEW APP",
       "title": "Your script, always in sight.",
@@ -17,6 +23,12 @@
       "headline": "151K+ STARS",
       "title": "The world's largest prompt collection.",
       "subtitle": "Share, discover, and collect AI prompts from the community. Free, open source, and self-hostable."
+    },
+    {
+      "id": "dodoshot",
+      "headline": "FREE ALTERNATIVE",
+      "title": "Screenshots, reimagined.",
+      "subtitle": "A beautiful, free screenshot tool for macOS — capture, annotate, and manage. Inspired by CleanShot X."
     }
   ],
   "categories": [
@@ -152,7 +164,7 @@
       "github": "https://github.com/f/agentlytics",
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
-      "stars": 309,
+      "stars": 310,
       "forks": 33,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
@@ -193,7 +205,7 @@
       "github": "https://github.com/f/appetit",
       "homepage": "https://apps.fka.dev",
       "language": "JavaScript",
-      "stars": 14,
+      "stars": 15,
       "forks": 3,
       "requirements": "Any modern browser",
       "features": [
@@ -769,8 +781,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 151627,
-      "forks": 19921,
+      "stars": 151630,
+      "forks": 19920,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -855,7 +867,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 1975,
+      "stars": 1976,
       "forks": 135,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
