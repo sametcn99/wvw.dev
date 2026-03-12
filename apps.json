@@ -307,8 +307,13 @@
       "description": "A lightweight, native clipboard manager that automatically saves everything you copy and provides instant access to your clipboard history.",
       "longDescription": "A lightweight, native clipboard manager that automatically saves everything you copy and provides instant access to your clipboard history.",
       "icon": "https://raw.githubusercontent.com/DodoApps/dodoclip/main/icon.png",
-      "iconStyle": {},
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
       "category": [
+        "macos",
         "productivity"
       ],
       "platform": "macOS",
@@ -333,7 +338,46 @@
       "_owner": "main",
       "_developer": "DodoApps",
       "_store": "DodoApps",
-      "_storeUrl": "",
+      "_storeUrl": "https://github.com/DodoApps",
+      "developer": "DodoApps"
+    },
+    {
+      "id": "dodocount",
+      "name": "DodoCount",
+      "subtitle": "Google Analytics in your menu bar",
+      "description": "A beautiful macOS menubar app for Google Analytics 4 and Search Console. Quick access to visitor data and search metrics.",
+      "longDescription": "A beautiful macOS menubar app for Google Analytics 4 and Search Console. Quick access to visitor data and search metrics.",
+      "icon": "https://raw.githubusercontent.com/DodoApps/dodocount/main/dodocount.png",
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": [
+        "business",
+        "macos"
+      ],
+      "platform": "macOS",
+      "price": "Free",
+      "github": "https://github.com/DodoApps/dodocount",
+      "homepage": null,
+      "language": "Swift",
+      "stars": 11,
+      "forks": 2,
+      "downloadUrl": "https://github.com/DodoApps/dodocount/releases/download/v1.1.0/DodoCount-1.1.0.dmg",
+      "requirements": "macOS 14.0 or later",
+      "features": [
+        "Real-time visitor tracking",
+        "Search Console integration",
+        "Today vs yesterday comparison",
+        "Multiple property support"
+      ],
+      "screenshots": [],
+      "_source": "https://raw.githubusercontent.com/f/catalog/main/wvw.apps.json",
+      "_owner": "main",
+      "_developer": "DodoApps",
+      "_store": "DodoApps",
+      "_storeUrl": "https://github.com/DodoApps",
       "developer": "DodoApps"
     },
     {
@@ -343,8 +387,13 @@
       "description": "A native macOS application for organizing and rearranging your menu bar items through drag-and-drop functionality and search.",
       "longDescription": "A native macOS application for organizing and rearranging your menu bar items through drag-and-drop functionality and search.",
       "icon": "https://raw.githubusercontent.com/DodoApps/dodonest/main/icon.png",
-      "iconStyle": {},
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
       "category": [
+        "macos",
         "utilities"
       ],
       "platform": "macOS",
@@ -369,7 +418,46 @@
       "_owner": "main",
       "_developer": "DodoApps",
       "_store": "DodoApps",
-      "_storeUrl": "",
+      "_storeUrl": "https://github.com/DodoApps",
+      "developer": "DodoApps"
+    },
+    {
+      "id": "dodopass",
+      "name": "DodoPass",
+      "subtitle": "Native macOS password manager",
+      "description": "A native macOS password manager built with SwiftUI, featuring local AES-256-GCM encryption with optional iCloud sync. Touch ID unlock, auto-lock, and smart clipboard.",
+      "longDescription": "A native macOS password manager built with SwiftUI, featuring local AES-256-GCM encryption with optional iCloud sync. Touch ID unlock, auto-lock, and smart clipboard.",
+      "icon": "https://raw.githubusercontent.com/DodoApps/dodopass/main/icon.png",
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
+      "category": [
+        "macos",
+        "utilities"
+      ],
+      "platform": "macOS",
+      "price": "Free",
+      "github": "https://github.com/DodoApps/dodopass",
+      "homepage": null,
+      "language": "Swift",
+      "stars": 3,
+      "forks": 0,
+      "downloadUrl": "https://github.com/DodoApps/dodopass/releases/download/v1.0.0/DodoPass-1.0.0.dmg",
+      "requirements": "macOS 14.0 or later",
+      "features": [
+        "AES-256-GCM encryption",
+        "Touch ID unlock",
+        "Optional iCloud sync",
+        "Auto-lock on inactivity"
+      ],
+      "screenshots": [],
+      "_source": "https://raw.githubusercontent.com/f/catalog/main/wvw.apps.json",
+      "_owner": "main",
+      "_developer": "DodoApps",
+      "_store": "DodoApps",
+      "_storeUrl": "https://github.com/DodoApps",
       "developer": "DodoApps"
     },
     {
@@ -379,8 +467,13 @@
       "description": "A lightweight, native macOS menu bar app that displays real-time system metrics with beautiful mini graphs. Monitor CPU, memory, GPU, network, and more.",
       "longDescription": "A lightweight, native macOS menu bar app that displays real-time system metrics with beautiful mini graphs. Monitor CPU, memory, GPU, network, and more.",
       "icon": "https://raw.githubusercontent.com/DodoApps/dodopulse/525b81f/icon.png",
-      "iconStyle": {},
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
       "category": [
+        "macos",
         "utilities"
       ],
       "platform": "macOS",
@@ -405,7 +498,7 @@
       "_owner": "main",
       "_developer": "DodoApps",
       "_store": "DodoApps",
-      "_storeUrl": "",
+      "_storeUrl": "https://github.com/DodoApps",
       "developer": "DodoApps"
     },
     {
@@ -415,8 +508,13 @@
       "description": "Lightweight native macOS screenshot application with capture, annotation, and management capabilities. Inspired by CleanShot X, entirely free and open source.",
       "longDescription": "Lightweight native macOS screenshot application with capture, annotation, and management capabilities. Inspired by CleanShot X, entirely free and open source.",
       "icon": "https://raw.githubusercontent.com/DodoApps/dodoshot/main/icon.png",
-      "iconStyle": {},
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
       "category": [
+        "macos",
         "productivity"
       ],
       "platform": "macOS",
@@ -441,7 +539,7 @@
       "_owner": "main",
       "_developer": "DodoApps",
       "_store": "DodoApps",
-      "_storeUrl": "",
+      "_storeUrl": "https://github.com/DodoApps",
       "developer": "DodoApps"
     },
     {
@@ -451,8 +549,13 @@
       "description": "A native macOS application for system monitoring, disk analysis, and cleanup. Remove caches, logs, and temporary files with multiple safety mechanisms.",
       "longDescription": "A native macOS application for system monitoring, disk analysis, and cleanup. Remove caches, logs, and temporary files with multiple safety mechanisms.",
       "icon": "https://raw.githubusercontent.com/DodoApps/dodotidy/main/dodotidy.png",
-      "iconStyle": {},
+      "iconStyle": {
+        "scale": 1.3,
+        "objectFit": "cover",
+        "borderRadius": "22%"
+      },
       "category": [
+        "macos",
         "utilities"
       ],
       "platform": "macOS",
@@ -475,7 +578,7 @@
       "_owner": "main",
       "_developer": "DodoApps",
       "_store": "DodoApps",
-      "_storeUrl": "",
+      "_storeUrl": "https://github.com/DodoApps",
       "developer": "DodoApps"
     },
     {
@@ -666,7 +769,7 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 151626,
+      "stars": 151627,
       "forks": 19921,
       "requirements": "Any modern browser",
       "features": [
