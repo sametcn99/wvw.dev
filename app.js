@@ -133,6 +133,102 @@
     return app.buyUrl || app.homepage || app.github;
   }
 
+  function escapeHtml(str) {
+    return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function getTimeAgo(date) {
+    const seconds = Math.floor((new Date() - date) / 1000);
+    const intervals = [
+      { label: "y", seconds: 31536000 },
+      { label: "mo", seconds: 2592000 },
+      { label: "w", seconds: 604800 },
+      { label: "d", seconds: 86400 },
+      { label: "h", seconds: 3600 },
+      { label: "m", seconds: 60 },
+    ];
+    for (const i of intervals) {
+      const count = Math.floor(seconds / i.seconds);
+      if (count >= 1) return count + i.label + " ago";
+    }
+    return "just now";
+  }
+
+  function renderReviews(app) {
+    const comments = app._comments || [];
+    const hasGithub = app.github && app.github.includes("github.com");
+    if (comments.length === 0 && !hasGithub) return "";
+
+    const issuesUrl = hasGithub ? app.github + "/issues" : "";
+    const newIssueUrl = hasGithub ? app.github + "/issues/new" : "";
+
+    const clickToRate = hasGithub ? `
+      <div class="reviews-actions">
+        <div class="click-to-rate">
+          <span class="click-to-rate-label">Click to Rate:</span>
+          <a href="${newIssueUrl}" target="_blank" rel="noopener" class="rate-stars">
+            ${[1,2,3,4,5].map(() => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`).join("")}
+          </a>
+        </div>
+        <div class="review-links">
+          <a href="${newIssueUrl}" target="_blank" rel="noopener" class="review-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+            Write a Review
+          </a>
+          <a href="${issuesUrl}" target="_blank" rel="noopener" class="review-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            App Support
+          </a>
+        </div>
+      </div>` : "";
+
+    const reactionEmojis = {thumbsUp:"\u{1F44D}",thumbsDown:"\u{1F44E}",laugh:"\u{1F604}",hooray:"\u{1F389}",confused:"\u{1F615}",heart:"\u2764\uFE0F",rocket:"\u{1F680}",eyes:"\u{1F440}"};
+
+    const reviewCards = comments.map((c) => {
+      const timeAgo = getTimeAgo(new Date(c.created_at));
+      const body = escapeHtml(c.body || "");
+      const truncated = body.length > 200 ? body.substring(0, 200) + "\u2026" : body;
+      const reactions = c.reactions ? Object.entries(reactionEmojis)
+        .filter(([key]) => c.reactions[key] > 0)
+        .map(([key, emoji]) => `<span class="review-reaction">${emoji} ${c.reactions[key]}</span>`)
+        .join("") : "";
+
+      return `
+        <div class="review-card">
+          <div class="review-card-header">
+            <img class="review-avatar" src="${c.avatar}" alt="" onerror="this.style.display='none'">
+            <div class="review-header-info">
+              <span class="review-author">${escapeHtml(c.user)}</span>
+              <span class="review-time">${timeAgo}</span>
+            </div>
+          </div>
+          <div class="review-card-title">${escapeHtml(c.title)}</div>
+          <div class="review-card-body">${truncated}</div>
+          ${reactions ? `<div class="review-reactions">${reactions}</div>` : ""}
+          ${c.url ? `<a href="${c.url}" target="_blank" rel="noopener" class="review-more">more</a>` : ""}
+        </div>`;
+    }).join("");
+
+    return `
+      <div class="detail-section reviews-section">
+        <div class="section-header">
+          <h3 style="font-size:22px;margin-bottom:0">Ratings &amp; Reviews</h3>
+          ${hasGithub ? `<a href="${issuesUrl}" target="_blank" rel="noopener" class="see-all-link">See All</a>` : ""}
+        </div>
+        ${clickToRate}
+        ${reviewCards ? `
+        <div class="review-cards-wrapper">
+          <button class="review-scroll-btn review-scroll-left" aria-label="Scroll left">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="review-cards">${reviewCards}</div>
+          <button class="review-scroll-btn review-scroll-right" aria-label="Scroll right">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>` : ""}
+      </div>`;
+  }
+
   function getButtonLabel(app) {
     if (isPaidApp(app)) return app.price;
     if (app.brew || app.downloadUrl || app.installCommand) return "Get";
@@ -468,6 +564,8 @@
           </div>
         </div>` : ""}
 
+        ${renderReviews(app)}
+
         <div class="detail-section">
           <h3>Information</h3>
           <div class="info-grid">
@@ -506,6 +604,22 @@
             </div>` : ""}
           </div>
         </div>
+
+        ${(() => {
+          const sameStore = data.apps.filter(
+            (a) => a.id !== app.id && a._store && app._store && a._store === app._store
+          ).slice(0, 6);
+          if (sameStore.length === 0) return "";
+          return `
+        <div class="detail-section">
+          <div class="section-header">
+            <h3 style="font-size:22px;margin-bottom:0">More by ${app._store}</h3>
+          </div>
+          <div class="app-list">
+            ${sameStore.map((a) => appRow(a)).join("")}
+          </div>
+        </div>`;
+        })()}
 
         ${(() => {
           const related = data.apps.filter(
@@ -846,6 +960,7 @@
     });
 
     bindCarousel();
+    bindReviewScroll();
   }
 
   let carouselTimer = null;
@@ -906,6 +1021,35 @@
       else goTo(current);
       resetAutoplay();
     });
+  }
+
+  function bindReviewScroll() {
+    const wrapper = $(".review-cards-wrapper");
+    if (!wrapper) return;
+    const track = $(".review-cards", wrapper);
+    const leftBtn = $(".review-scroll-left", wrapper);
+    const rightBtn = $(".review-scroll-right", wrapper);
+    if (!track || !leftBtn || !rightBtn) return;
+
+    function updateButtons() {
+      leftBtn.disabled = track.scrollLeft <= 1;
+      rightBtn.disabled = track.scrollLeft >= track.scrollWidth - track.clientWidth - 1;
+    }
+
+    leftBtn.addEventListener("click", () => {
+      const card = track.querySelector(".review-card");
+      const step = card ? card.offsetWidth + 16 : 300;
+      track.scrollBy({ left: -step, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+      const card = track.querySelector(".review-card");
+      const step = card ? card.offsetWidth + 16 : 300;
+      track.scrollBy({ left: step, behavior: "smooth" });
+    });
+
+    track.addEventListener("scroll", updateButtons, { passive: true });
+    updateButtons();
   }
 
   // Sidebar click

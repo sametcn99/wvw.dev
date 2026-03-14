@@ -102,6 +102,36 @@
           "type": "array",
           "items": { "type": "string", "format": "uri" },
           "description": "Screenshot URLs shown in the detail page preview section."
+        },
+        "_comments": {
+          "type": "array",
+          "description": "Auto-populated by build.sh from GitHub Issues API. Not meant to be set manually.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "user": { "type": "string", "description": "GitHub username of the issue author." },
+              "avatar": { "type": "string", "format": "uri", "description": "Avatar URL of the issue author." },
+              "title": { "type": "string", "description": "Issue title, shown as review title." },
+              "body": { "type": "string", "description": "Issue body (truncated to 300 chars)." },
+              "url": { "type": "string", "format": "uri", "description": "Link to the GitHub issue." },
+              "created_at": { "type": "string", "format": "date-time", "description": "ISO 8601 timestamp." },
+              "reactions": {
+                "type": "object",
+                "description": "Reaction emoji counts from the issue.",
+                "properties": {
+                  "total": { "type": "integer" },
+                  "thumbsUp": { "type": "integer" },
+                  "thumbsDown": { "type": "integer" },
+                  "laugh": { "type": "integer" },
+                  "hooray": { "type": "integer" },
+                  "confused": { "type": "integer" },
+                  "heart": { "type": "integer" },
+                  "rocket": { "type": "integer" },
+                  "eyes": { "type": "integer" }
+                }
+              }
+            }
+          }
         }
       }
     }

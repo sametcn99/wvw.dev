@@ -123,11 +123,42 @@ while IFS= read -r app_json; do
     if [ -n "$stats" ]; then
       stars=$(echo "$stats" | jq '.stargazers_count // 0')
       forks=$(echo "$stats" | jq '.forks_count // 0')
-      echo "★ $stars  ⑂ $forks"
+      echo -n "★ $stars  ⑂ $forks"
       app_json=$(echo "$app_json" | jq --argjson s "$stars" --argjson f "$forks" '.stars = $s | .forks = $f')
     else
-      echo "SKIPPED (API error)"
+      echo -n "SKIPPED (API error)"
     fi
+
+    issues_json=$(curl -sf "https://api.github.com/repos/$repo_path/issues?state=all&per_page=10&sort=created&direction=desc" \
+      ${GITHUB_TOKEN:+-H "Authorization: token $GITHUB_TOKEN"} 2>/dev/null) || issues_json="[]"
+
+    if [ -n "$issues_json" ] && [ "$issues_json" != "[]" ]; then
+      comments=$(echo "$issues_json" | jq '[.[] | select(.pull_request == null) | {
+        user: .user.login,
+        avatar: .user.avatar_url,
+        title: .title,
+        body: ((.body // "")[0:300]),
+        url: .html_url,
+        created_at: .created_at,
+        reactions: {
+          total: (.reactions.total_count // 0),
+          thumbsUp: (.reactions["+1"] // 0),
+          thumbsDown: (.reactions["-1"] // 0),
+          laugh: (.reactions.laugh // 0),
+          hooray: (.reactions.hooray // 0),
+          confused: (.reactions.confused // 0),
+          heart: (.reactions.heart // 0),
+          rocket: (.reactions.rocket // 0),
+          eyes: (.reactions.eyes // 0)
+        }
+      }][0:5]')
+      comment_count=$(echo "$comments" | jq 'length')
+      if [ "$comment_count" -gt 0 ]; then
+        app_json=$(echo "$app_json" | jq --argjson c "$comments" '._comments = $c')
+        echo -n "  💬 $comment_count"
+      fi
+    fi
+    echo ""
   fi
 
   updated_apps=$(echo "$updated_apps" "[$app_json]" | jq -s '.[0] + .[1]')
