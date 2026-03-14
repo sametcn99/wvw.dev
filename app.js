@@ -507,6 +507,9 @@
               <a href="${app.github}" target="_blank" rel="noopener" class="github-link">
                 ${icons.github} View on GitHub
               </a>
+              <button class="share-btn" data-action="share" aria-label="Share">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -781,6 +784,9 @@
             <div class="store-detail-actions">
               ${store.url ? `<a href="${store.url}" target="_blank" rel="noopener" class="store-card-btn primary">Visit Store</a>` : ""}
               <a href="${sourceLink}" target="_blank" rel="noopener" class="store-card-btn secondary">${icons.github} View Repo</a>
+              <button class="share-btn" data-action="share" aria-label="Share">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+              </button>
             </div>
           </div>
         </div>
@@ -1053,6 +1059,21 @@
       if (btn.dataset.boundBack) return;
       btn.dataset.boundBack = "1";
       btn.addEventListener("click", () => navigate(currentView));
+    });
+
+    $$("[data-action='share']").forEach((btn) => {
+      if (btn.dataset.boundShare) return;
+      btn.dataset.boundShare = "1";
+      btn.addEventListener("click", () => {
+        const url = isLocal
+          ? `https://wvw.dev${buildPath(currentView, currentApp)}`
+          : location.href;
+        if (navigator.share) {
+          navigator.share({ url }).catch(() => {});
+        } else {
+          copyToClipboard(url);
+        }
+      });
     });
 
     $$("[data-action='back-stores']").forEach((btn) => {
