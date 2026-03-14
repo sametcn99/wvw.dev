@@ -2191,7 +2191,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 1988,
+      "stars": 1985,
       "forks": 138,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
@@ -2234,9 +2234,7 @@
       "_developer": "Kagan Temizkan",
       "_store": "Kagan Temizkan",
       "_storeUrl": "https://my-store-six-ruby.vercel.app/apps",
-      "developer": "Kagan Temizkan",
-      "stars": 0,
-      "forks": 0
+      "developer": "Kagan Temizkan"
     },
     {
       "id": "vitepress-mermaid-renderer",
@@ -2301,9 +2299,7 @@
       "_developer": "Kagan Temizkan",
       "_store": "Kagan Temizkan",
       "_storeUrl": "https://my-store-six-ruby.vercel.app/apps",
-      "developer": "Kagan Temizkan",
-      "stars": 0,
-      "forks": 0
+      "developer": "Kagan Temizkan"
     }
   ]
 }
