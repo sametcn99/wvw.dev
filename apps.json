@@ -518,8 +518,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 384,
-      "forks": 63,
+      "stars": 385,
+      "forks": 64,
       "_comments": [
         {
           "user": "mergisi",
@@ -920,8 +920,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 384,
-      "forks": 63,
+      "stars": 385,
+      "forks": 64,
       "_comments": [
         {
           "user": "mergisi",
@@ -3346,8 +3346,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 152416,
-      "forks": 20032,
+      "stars": 152419,
+      "forks": 20033,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -3430,8 +3430,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 152416,
-      "forks": 20032,
+      "stars": 152419,
+      "forks": 20033,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -4396,6 +4396,7 @@
       "language": "Rust",
       "stars": 1,
       "forks": 0,
+      "brew": "brew install f/tap/wvw",
       "downloadUrl": "https://github.com/f/wvw.dev-app/releases/latest",
       "requirements": "macOS 10.15+, Windows 10+, or Linux",
       "features": [
