@@ -1379,10 +1379,8 @@
   function bindDesktopBanner() {
     const banner = $("#desktopBanner");
     if (!banner) return;
-    if (localStorage.getItem("hideBanner")) {
-      banner.classList.add("hidden");
-      return;
-    }
+    if (localStorage.getItem("hideBanner")) return;
+    banner.classList.add("visible");
     const btn = $("#desktopBannerBtn");
     const close = $("#desktopBannerClose");
     btn.addEventListener("click", (e) => {
@@ -1390,7 +1388,7 @@
       navigate("discover", "wvw-desktop");
     });
     close.addEventListener("click", () => {
-      banner.classList.add("hidden");
+      banner.classList.remove("visible");
       localStorage.setItem("hideBanner", "1");
     });
   }
