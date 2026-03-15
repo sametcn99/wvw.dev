@@ -1,0 +1,85 @@
+name: "Request an App"
+description: "Suggest an app to be listed on World Vibe Web"
+title: "[request]: "
+labels: ["app-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an app for WVW! Fill in the details below and we'll look into adding it.
+
+  - type: input
+    id: app-name
+    attributes:
+      label: App Name
+      placeholder: "e.g. My Cool Tool"
+    validations:
+      required: true
+
+  - type: input
+    id: github-url
+    attributes:
+      label: GitHub Repository URL
+      placeholder: "https://github.com/user/repo"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS
+        - Web
+        - CLI
+        - Node.js
+        - Python
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary Category
+      options:
+        - macOS Apps
+        - Web Apps
+        - CLI Apps
+        - Developer Tools
+        - Productivity
+        - Utilities
+        - Education
+        - Entertainment
+        - Games
+        - Music
+        - Photo & Video
+        - Graphics & Design
+        - Social Networking
+        - Finance
+        - Health & Fitness
+        - Lifestyle
+        - News
+        - Business
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Why should this app be on WVW?
+      placeholder: "What does the app do? Why is it interesting?"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: The app is open source
+          required: true
+        - label: The app has a public GitHub repository
+          required: true
+        - label: I am not the developer of this app (or I am, and want help listing it)
