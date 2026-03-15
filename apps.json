@@ -200,7 +200,7 @@
       "github": "https://github.com/f/agentlytics",
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
-      "stars": 330,
+      "stars": 334,
       "forks": 34,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
@@ -346,7 +346,7 @@
       "github": "https://github.com/f/appetit",
       "homepage": "https://apps.fka.dev",
       "language": "JavaScript",
-      "stars": 27,
+      "stars": 28,
       "forks": 4,
       "requirements": "Any modern browser",
       "features": [
@@ -459,8 +459,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 400,
-      "forks": 70
+      "stars": 406,
+      "forks": 71
     },
     {
       "id": "bilokma",
@@ -523,7 +523,10 @@
         "Installable PWA backed by self-hosted SQLite storage"
       ],
       "screenshots": [
-        "https://opengraph.githubassets.com/1/sametcn99/booking-calendar"
+        "https://raw.githubusercontent.com/sametcn99/booking-calendar/refs/heads/main/src/docs/public/screenshots/dashboard/dashboard_monthly.png",
+        "https://raw.githubusercontent.com/sametcn99/booking-calendar/refs/heads/main/src/docs/public/screenshots/settings/settings.png",
+        "https://raw.githubusercontent.com/sametcn99/booking-calendar/refs/heads/main/src/docs/public/screenshots/planner/planner_all.png",
+        "https://raw.githubusercontent.com/sametcn99/booking-calendar/refs/heads/main/src/docs/public/screenshots/appointments/appointments_all.png"
       ],
       "_source": "sametcn99/apps",
       "_owner": "sametcn99",
@@ -552,7 +555,7 @@
       "github": "https://github.com/f/check-ai",
       "homepage": null,
       "language": "JavaScript",
-      "stars": 55,
+      "stars": 56,
       "forks": 4,
       "installCommand": "npx check-ai",
       "requirements": "Node.js 18+",
@@ -705,8 +708,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 400,
-      "forks": 70
+      "stars": 406,
+      "forks": 71
     },
     {
       "id": "damga",
@@ -784,7 +787,7 @@
       "github": "https://github.com/f/deeper",
       "homepage": null,
       "language": "Swift",
-      "stars": 58,
+      "stars": 59,
       "forks": 6,
       "brew": "brew install f/tap/deeper",
       "downloadUrl": "https://github.com/f/deeper/releases/latest",
@@ -871,7 +874,7 @@
       "github": "https://github.com/DodoApps/dodoclip",
       "homepage": null,
       "language": "Swift",
-      "stars": 79,
+      "stars": 80,
       "forks": 4,
       "downloadUrl": null,
       "requirements": "macOS 14.0 or later",
@@ -1152,7 +1155,7 @@
       "github": "https://github.com/DodoApps/dodotidy",
       "homepage": null,
       "language": "Swift",
-      "stars": 170,
+      "stars": 171,
       "forks": 6,
       "downloadUrl": null,
       "requirements": "macOS 14.0 or later",
@@ -1982,7 +1985,7 @@
       "_store": "Yusuf's Apps",
       "_storeUrl": "",
       "developer": "Yusuf Altunbicak",
-      "stars": 4,
+      "stars": 5,
       "forks": 0
     },
     {
@@ -2067,9 +2070,9 @@
     {
       "id": "pixel-guess-mobile",
       "name": "Pixel Guess Mobile",
-      "subtitle": "Pixel guessing game for iOS & Android",
+      "subtitle": "Pixel guessing game for iOS",
       "description": "The mobile version of Pixel Guess — guess pixelated characters on your phone with smooth animations and native performance.",
-      "longDescription": "Pixel Guess Mobile brings the pixel guessing experience to iOS and Android. Built with Expo and React Native, it features smooth Skia-powered animations, multiple game categories, Easy and Hard difficulty modes, streak tracking, global leaderboards, and confetti celebrations on correct guesses. Search characters with smart autocomplete and compete with players worldwide.",
+      "longDescription": "Pixel Guess Mobile brings the pixel guessing experience to iOS. Built with Expo and React Native, it features smooth Skia-powered animations, multiple game categories, Easy and Hard difficulty modes, streak tracking, global leaderboards, and confetti celebrations on correct guesses. Search characters with smart autocomplete and compete with players worldwide.",
       "icon": "https://raw.githubusercontent.com/Jubstaaa/pixelate-game-mobile/main/assets/icon.png",
       "iconStyle": {
         "borderRadius": "22%"
@@ -2252,8 +2255,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 152517,
-      "forks": 20054,
+      "stars": 152583,
+      "forks": 20058,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -2296,8 +2299,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 152517,
-      "forks": 20054,
+      "stars": 152583,
+      "forks": 20058,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -2737,7 +2740,7 @@
       "_store": "RadKod Apps",
       "_storeUrl": "",
       "developer": "Abdullah Bozdag",
-      "stars": 1,
+      "stars": 4,
       "forks": 0
     },
     {
@@ -2809,7 +2812,7 @@
       "_store": "Shibutani Software Lab",
       "_storeUrl": "",
       "developer": "Kazuki Shibutani",
-      "stars": 2,
+      "stars": 3,
       "forks": 0
     },
     {
@@ -2871,7 +2874,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2001,
+      "stars": 2003,
       "forks": 140,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
@@ -3052,7 +3055,7 @@
       "github": "https://github.com/f/wvw.dev-app",
       "homepage": "https://wvw.dev",
       "language": "Rust",
-      "stars": 2,
+      "stars": 4,
       "forks": 0,
       "brew": "brew install f/tap/wvw",
       "downloadUrl": "https://github.com/f/wvw.dev-app/releases/latest",
