@@ -90,6 +90,10 @@
     return String(n);
   }
 
+  function appIconSrc(app) {
+    return app._generatedIcon || app.icon || null;
+  }
+
   function iconStyle(app) {
     const s = app.iconStyle || {};
     const parts = [];
@@ -108,13 +112,11 @@
   }
 
   function renderIcon(app) {
-    if (app._generatedIcon) {
-      return `<img src="${app._generatedIcon}" alt="${app.name}" style="object-fit:cover;border-radius:22%" onerror="this.parentElement.innerHTML='${app.iconEmoji || "📦"}'">`;
-    }
-    if (app.icon) {
-      const imgSt = iconStyle(app);
+    const src = appIconSrc(app);
+    if (src) {
+      const imgSt = app._generatedIcon ? 'object-fit:cover;border-radius:22%' : iconStyle(app);
       const st = imgSt ? ` style="${imgSt}"` : "";
-      return `<img src="${app.icon}" alt="${app.name}"${st} onerror="this.parentElement.innerHTML='${app.iconEmoji || "📦"}'">`;
+      return `<img src="${src}" alt="${app.name}"${st} onerror="this.parentElement.innerHTML='${app.iconEmoji || "📦"}'">`;
     }
     return app.iconEmoji || "📦";
   }
@@ -314,7 +316,7 @@
         <div class="card-image">
           <div class="card-image-bg" style="background:linear-gradient(135deg, ${g[0]}, ${g[1]}, ${g[2]})">
             ${screenshotImg}
-            <div class="card-icon-fallback">${app.icon ? `<img src="${app.icon}" style="width:80px;height:80px;border-radius:18px;${iconStyle(app)}" onerror="this.outerHTML='📦'">` : (app.iconEmoji || "📦")}</div>
+            <div class="card-icon-fallback">${appIconSrc(app) ? `<img src="${appIconSrc(app)}" style="width:80px;height:80px;border-radius:18px;object-fit:cover" onerror="this.outerHTML='📦'">` : (app.iconEmoji || "📦")}</div>
           </div>
         </div>
         <div class="card-body">
@@ -437,7 +439,7 @@
     return `
       <div class="showcase-card" data-app="${pick.id}" style="${bg}">
         <div class="showcase-overlay">
-          <div class="showcase-card-icon">${app.icon ? `<img src="${app.icon}" style="width:40px;height:40px;border-radius:10px;${iconStyle(app)}" onerror="this.outerHTML='${app.iconEmoji || "📦"}'">` : (app.iconEmoji || "📦")}</div>
+          <div class="showcase-card-icon">${appIconSrc(app) ? `<img src="${appIconSrc(app)}" style="width:40px;height:40px;border-radius:10px;object-fit:cover" onerror="this.outerHTML='${app.iconEmoji || "📦"}'">` : (app.iconEmoji || "📦")}</div>
           <div class="showcase-card-info">
             <div class="showcase-card-name">${app.name}</div>
             <div class="showcase-card-sub">${app.subtitle}</div>
