@@ -4,6 +4,13 @@ set -euo pipefail
 APPS_FILE="apps.json"
 ICONS_DIR="assets/icons"
 SHOWCASE_DIR="assets/showcase"
+ICONS_ONLY=false
+
+for arg in "$@"; do
+  case "$arg" in
+    --icons-only) ICONS_ONLY=true ;;
+  esac
+done
 
 if ! command -v jq &>/dev/null; then
   echo "Error: jq is required."
@@ -18,11 +25,32 @@ fi
 mkdir -p "$ICONS_DIR" "$SHOWCASE_DIR"
 
 REPO_BASE="https://raw.githubusercontent.com/f/wvw.dev/master"
+OUR_ICON_PREFIX="${REPO_BASE}/${ICONS_DIR}/"
+
+# --- Remove our fallback icons for apps whose store owner added their own icon ---
+echo "=== Checking for store-owner icon updates ==="
+
+removed=0
+for icon_file in "$ICONS_DIR"/*.jpg; do
+  [ -f "$icon_file" ] || continue
+  app_id=$(basename "$icon_file" .jpg)
+  our_url="${OUR_ICON_PREFIX}${app_id}.jpg"
+
+  current_icon=$(jq -r --arg id "$app_id" '.apps[] | select(.id == $id) | .icon // empty' "$APPS_FILE" | head -1)
+
+  if [ -n "$current_icon" ] && [ "$current_icon" != "$our_url" ]; then
+    echo "  $app_id — store owner set icon, removing our fallback"
+    rm -f "$icon_file"
+    removed=$((removed + 1))
+  fi
+done
+echo "Removed $removed superseded fallback icons."
 
 # --- Generate icons for apps without icons ---
+echo ""
 echo "=== Generating icons for apps without icons ==="
 
-apps_without_icons=$(jq -c '.apps[] | select(.icon == null and (.iconEmoji == null or .iconEmoji == "📦"))' "$APPS_FILE")
+apps_needing_icons=$(jq -c '.apps[] | select(.icon == null and (.iconEmoji == null or .iconEmoji == "📦"))' "$APPS_FILE")
 
 icon_count=0
 while IFS= read -r app; do
@@ -68,11 +96,40 @@ while IFS= read -r app; do
   else
     echo "FAILED"
   fi
-done <<< "$apps_without_icons"
+done <<< "$apps_needing_icons"
 
 echo "Generated $icon_count new icons."
 
-# --- Cache showcase images ---
+# --- Update apps.json with generated icon URLs ---
+echo ""
+echo "=== Updating apps.json with generated icon URLs ==="
+
+updated=0
+for icon_file in "$ICONS_DIR"/*.jpg; do
+  [ -f "$icon_file" ] || continue
+  app_id=$(basename "$icon_file" .jpg)
+  icon_url="${OUR_ICON_PREFIX}${app_id}.jpg"
+
+  current_icon=$(jq -r --arg id "$app_id" '.apps[] | select(.id == $id) | .icon // empty' "$APPS_FILE" | head -1)
+  if [ -z "$current_icon" ]; then
+    jq --arg id "$app_id" --arg url "$icon_url" '
+      .apps = [.apps[] | if .id == $id then .icon = $url | .iconStyle = {"scale": 1, "objectFit": "cover", "borderRadius": "22%"} else . end]
+    ' "$APPS_FILE" > "${APPS_FILE}.tmp" && mv "${APPS_FILE}.tmp" "$APPS_FILE"
+    echo "  $app_id — icon URL set"
+    updated=$((updated + 1))
+  fi
+done
+
+echo "Updated $updated app icon URLs."
+
+# --- Cache showcase images (skip if --icons-only) ---
+if [ "$ICONS_ONLY" = true ]; then
+  echo ""
+  echo "Skipping showcase caching (--icons-only mode)."
+  echo "Done."
+  exit 0
+fi
+
 echo ""
 echo "=== Caching showcase images ==="
 
@@ -86,6 +143,7 @@ else
     img_url=$(echo "$pick" | jq -r '.showcase_image // empty')
 
     [ -z "$img_url" ] && continue
+    echo "$img_url" | grep -q "^${REPO_BASE}" && continue
 
     cache_file="$SHOWCASE_DIR/${app_id}.jpg"
 
@@ -109,26 +167,6 @@ else
   echo "Cached $showcase_count new showcase images."
 fi
 
-# --- Update apps.json with generated icon URLs ---
-echo ""
-echo "=== Updating apps.json with generated icon URLs ==="
-
-updated=0
-for icon_file in "$ICONS_DIR"/*.jpg; do
-  [ -f "$icon_file" ] || continue
-  app_id=$(basename "$icon_file" .jpg)
-  icon_url="${REPO_BASE}/${ICONS_DIR}/${app_id}.jpg"
-
-  has_icon=$(jq --arg id "$app_id" '.apps[] | select(.id == $id) | .icon // empty' "$APPS_FILE" | head -1)
-  if [ -z "$has_icon" ]; then
-    jq --arg id "$app_id" --arg url "$icon_url" '
-      .apps = [.apps[] | if .id == $id then .icon = $url | .iconStyle = {"scale": 1, "objectFit": "cover", "borderRadius": "22%"} else . end]
-    ' "$APPS_FILE" > "${APPS_FILE}.tmp" && mv "${APPS_FILE}.tmp" "$APPS_FILE"
-    echo "  $app_id — icon URL set"
-    updated=$((updated + 1))
-  fi
-done
-
 # --- Update showcase.json with cached image URLs ---
 for cache_file in "$SHOWCASE_DIR"/*.jpg; do
   [ -f "$cache_file" ] || continue
@@ -143,6 +181,5 @@ for cache_file in "$SHOWCASE_DIR"/*.jpg; do
   fi
 done
 
-echo "Updated $updated app icon URLs."
 echo ""
 echo "Done."
