@@ -208,7 +208,7 @@
       "github": "https://github.com/f/agentlytics",
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
-      "stars": 339,
+      "stars": 340,
       "forks": 34,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
@@ -471,8 +471,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 806,
-      "forks": 132,
+      "stars": 825,
+      "forks": 138,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/awesome-openclaw-agents.jpg"
     },
     {
@@ -879,8 +879,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 806,
-      "forks": 132,
+      "stars": 825,
+      "forks": 138,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/crewclaw.jpg"
     },
     {
@@ -11783,6 +11783,50 @@
       "developer": "Kagan Temizkan"
     },
     {
+      "id": "nodepad",
+      "name": "NodePad",
+      "subtitle": "A visual workspace for cognition-heavy non-linear LLM conversations",
+      "description": "Construct, branch, and explore LLM conversations as directed graphs on an infinite canvas. Break free from linear chat with complete spatial control over your context.",
+      "longDescription": "NodePad is a visual workspace designed for high-agency users who find traditional, linear AI chats limiting. Every user message and AI response becomes an independent, addressable node on an infinite canvas. This graph-native architecture allows you to seamlessly branch conversations into parallel threads from any point, explore alternative approaches side-by-side, and easily switch between multiple LLM providers within the same workspace. With spatial auto-layout, dynamic context highlighting, and integrated text nodes for scratchpad thinking, NodePad gives you absolute visual control over the exact context your models see.",
+      "icon": "https://raw.githubusercontent.com/palazski/apps/master/favicon.svg",
+      "iconStyle": {
+        "scale": 0.8,
+        "padding": "12px",
+        "objectFit": "contain",
+        "bgColor": "#000000"
+      },
+      "category": [
+        "web",
+        "developer-tools",
+        "productivity"
+      ],
+      "platform": "Web",
+      "price": "Closed Beta",
+      "github": "https://github.com/palazski/apps",
+      "homepage": "https://node-pad.com",
+      "language": "TypeScript",
+      "features": [
+        "Branch conversations into parallel exploration threads from any message",
+        "Infinite visual canvas with spatial node organization",
+        "Multi-model support within the same workspace (soon)",
+        "Real-time LLM response streaming with concurrent operation support",
+        "Dynamic context visibility with path highlighting",
+        "Text nodes for sticky notes, references, and scratchpad thinking",
+        "Graph-native editing where the visual topology acts as your version history"
+      ],
+      "screenshots": [
+        "https://raw.githubusercontent.com/palazski/apps/master/wvw.png"
+      ],
+      "_source": "palazski/apps",
+      "_owner": "palazski",
+      "_developer": "Abdullah Palaz",
+      "_store": "palazski's awesome apps",
+      "_storeUrl": "",
+      "developer": "Abdullah Palaz",
+      "stars": 0,
+      "forks": 0
+    },
+    {
       "id": "number-match",
       "name": "Number Match",
       "subtitle": "Number match game app.",
@@ -11855,7 +11899,7 @@
       "_store": "Yusuf's Apps",
       "_storeUrl": "",
       "developer": "Yusuf Altunbicak",
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/outlook365-cli.jpg"
     },
@@ -11960,7 +12004,7 @@
       "subtitle": "Guess the character behind the pixels",
       "description": "An engaging web game where players identify pixelated images from categories like League of Legends, Valorant, and Demon Slayer.",
       "longDescription": "Pixel Guess is a guessing game where you reveal hidden characters pixel by pixel. Pick a category, choose Easy or Hard difficulty, and try to identify the character before the image is fully revealed. Track your streak, compete on global leaderboards, and challenge yourself across multiple categories. Supports 12 languages.",
-      "icon": "https://raw.githubusercontent.com/Jubstaaa/pixelate-game-mobile/main/assets/icon.png",
+      "icon": "https://raw.githubusercontent.com/Jubstaaa/pixel-guess/main/apps/mobile/assets/icon.png",
       "iconStyle": {
         "borderRadius": "22%"
       },
@@ -11969,9 +12013,9 @@
       ],
       "platform": "Web",
       "price": "Free",
-      "github": "https://github.com/Jubstaaa/pixelate-game",
+      "github": "https://github.com/Jubstaaa/pixel-guess",
       "homepage": "https://pixelguessgame.com",
-      "language": "JavaScript",
+      "language": "TypeScript",
       "requirements": "Any modern browser",
       "features": [
         "Multiple categories: LoL, Valorant, Demon Slayer and more",
@@ -11997,8 +12041,8 @@
       "name": "Pixel Guess Mobile",
       "subtitle": "Pixel guessing game for iOS",
       "description": "The mobile version of Pixel Guess — guess pixelated characters on your phone with smooth animations and native performance.",
-      "longDescription": "Pixel Guess Mobile brings the pixel guessing experience to iOS. Built with Expo and React Native, it features smooth Skia-powered animations, multiple game categories, Easy and Hard difficulty modes, streak tracking, global leaderboards, and confetti celebrations on correct guesses. Search characters with smart autocomplete and compete with players worldwide.",
-      "icon": "https://raw.githubusercontent.com/Jubstaaa/pixelate-game-mobile/main/assets/icon.png",
+      "longDescription": "Pixel Guess Mobile brings the pixel guessing experience to your phone. Built with Expo and React Native, it features smooth Skia-powered animations, multiple game categories, Easy and Hard difficulty modes, streak tracking, global leaderboards, and confetti celebrations on correct guesses. Search characters with smart autocomplete and compete with players worldwide.",
+      "icon": "https://raw.githubusercontent.com/Jubstaaa/pixel-guess/main/apps/mobile/assets/icon.png",
       "iconStyle": {
         "borderRadius": "22%"
       },
@@ -12007,7 +12051,7 @@
       ],
       "platform": "iOS",
       "price": "Free",
-      "github": "https://github.com/Jubstaaa/pixelate-game-mobile",
+      "github": "https://github.com/Jubstaaa/pixel-guess",
       "homepage": "https://apps.apple.com/tr/app/pixel-guess/id6760237625",
       "language": "TypeScript",
       "downloadUrl": "https://apps.apple.com/tr/app/pixel-guess/id6760237625",
@@ -12183,8 +12227,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 153034,
-      "forks": 20129,
+      "stars": 153074,
+      "forks": 20133,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -12227,8 +12271,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 153034,
-      "forks": 20129,
+      "stars": 153074,
+      "forks": 20133,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -12926,7 +12970,7 @@
       "_store": "efekurucay apps",
       "_storeUrl": "",
       "developer": "efekurucay",
-      "stars": 0,
+      "stars": 3,
       "forks": 0
     },
     {
@@ -12950,7 +12994,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2028,
+      "stars": 2030,
       "forks": 143,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
