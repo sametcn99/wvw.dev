@@ -208,7 +208,7 @@
       "github": "https://github.com/f/agentlytics",
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
-      "stars": 352,
+      "stars": 353,
       "forks": 37,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
@@ -440,7 +440,7 @@
       "_store": "TDD Works",
       "_storeUrl": "",
       "developer": "tddworks",
-      "stars": 107,
+      "stars": 108,
       "forks": 14
     },
     {
@@ -471,8 +471,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 1854,
-      "forks": 262,
+      "stars": 1860,
+      "forks": 265,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/awesome-openclaw-agents.jpg"
     },
     {
@@ -1011,8 +1011,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 1854,
-      "forks": 262,
+      "stars": 1860,
+      "forks": 265,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/crewclaw.jpg"
     },
     {
@@ -1468,7 +1468,7 @@
       "github": "https://github.com/DodoApps/dodoshot",
       "homepage": null,
       "language": "Swift",
-      "stars": 35,
+      "stars": 36,
       "forks": 5,
       "downloadUrl": null,
       "requirements": "macOS 14.0 or later",
@@ -11181,8 +11181,8 @@
       "github": "https://github.com/f/poke-gate",
       "homepage": "https://poke.com",
       "language": "Swift / JavaScript",
-      "stars": 25,
-      "forks": 1,
+      "stars": 27,
+      "forks": 2,
       "brew": "brew install f/tap/poke-gate",
       "installCommand": "npx poke-gate",
       "downloadUrl": "https://github.com/f/poke-gate/releases/latest",
@@ -11455,8 +11455,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 154134,
-      "forks": 20258,
+      "stars": 154148,
+      "forks": 20256,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -11499,8 +11499,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 154134,
-      "forks": 20258,
+      "stars": 154148,
+      "forks": 20256,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -11950,7 +11950,7 @@
       "_developer": "Serafettin Sarisen",
       "_store": "Serafettin Sarisen",
       "_storeUrl": "",
-      "stars": 8,
+      "stars": 9,
       "forks": 1
     },
     {
@@ -12392,8 +12392,8 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2181,
-      "forks": 147,
+      "stars": 2184,
+      "forks": 148,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
       "requirements": "macOS 15 Sequoia or later",
