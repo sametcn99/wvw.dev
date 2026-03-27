@@ -535,8 +535,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2017,
-      "forks": 298,
+      "stars": 2041,
+      "forks": 301,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/awesome-openclaw-agents.jpg"
     },
     {
@@ -1259,8 +1259,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2017,
-      "forks": 298,
+      "stars": 2041,
+      "forks": 301,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/crewclaw.jpg"
     },
     {
@@ -10492,7 +10492,7 @@
       "platform": "iOS & Android",
       "price": "Free",
       "github": "https://github.com/abutun/appetit",
-      "homepage": "https://cosmicmeta.ai/apps-games/glow-spin/",
+      "homepage": "https://glowspin.app",
       "language": "Kotlin",
       "features": [
         "Rhythm-based reflex gameplay",
@@ -11876,7 +11876,7 @@
       "github": "https://github.com/f/poke-gate",
       "homepage": "https://poke.com",
       "language": "Swift / JavaScript",
-      "stars": 39,
+      "stars": 42,
       "forks": 4,
       "brew": "brew install f/tap/poke-gate",
       "installCommand": "npx poke-gate",
@@ -12183,7 +12183,7 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 154395,
+      "stars": 154409,
       "forks": 20284,
       "requirements": "Any modern browser",
       "features": [
@@ -12227,7 +12227,7 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 154395,
+      "stars": 154409,
       "forks": 20284,
       "requirements": "Any modern browser",
       "features": [
@@ -13149,7 +13149,7 @@
       "platform": "iOS & Android",
       "price": "Free",
       "github": "https://github.com/abutun/appetit",
-      "homepage": "https://cosmicmeta.ai/apps-games/swipe-slip/",
+      "homepage": "https://swipeslip.app",
       "language": "Kotlin",
       "features": [
         "Endless tunnel running gameplay",
@@ -13326,8 +13326,8 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2239,
-      "forks": 151,
+      "stars": 2244,
+      "forks": 152,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
       "requirements": "macOS 15 Sequoia or later",
