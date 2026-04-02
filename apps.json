@@ -274,8 +274,8 @@
       "github": "https://github.com/f/agentlytics",
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
-      "stars": 382,
-      "forks": 37,
+      "stars": 383,
+      "forks": 38,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
       "features": [
@@ -552,7 +552,7 @@
       "_store": "Cosmic Meta Digital",
       "_storeUrl": "https://cosmicmeta.ai",
       "developer": "Cosmic Meta Digital",
-      "stars": 16,
+      "stars": 17,
       "forks": 1,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/aso-screenshot-generator.jpg"
     },
@@ -584,8 +584,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2426,
-      "forks": 368,
+      "stars": 2441,
+      "forks": 369,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/awesome-openclaw-agents.jpg"
     },
     {
@@ -1072,7 +1072,7 @@
       "_store": "Claude Board",
       "_storeUrl": "https://github.com/bahri-hirfanoglu/claude-board",
       "developer": "Bahri Hırfanoğlu",
-      "stars": 8,
+      "stars": 9,
       "forks": 1
     },
     {
@@ -1356,8 +1356,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2426,
-      "forks": 368,
+      "stars": 2441,
+      "forks": 369,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/crewclaw.jpg"
     },
     {
@@ -11702,7 +11702,7 @@
       "github": "https://github.com/f/git-rewrite-commits",
       "homepage": "https://blog.fka.dev/git-rewrite-commits/",
       "language": "TypeScript",
-      "stars": 1409,
+      "stars": 1408,
       "forks": 56,
       "installCommand": "npx git-rewrite-commits",
       "requirements": "Node.js, Git",
@@ -13581,8 +13581,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 156541,
-      "forks": 20548,
+      "stars": 156703,
+      "forks": 20562,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -13625,8 +13625,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 156541,
-      "forks": 20548,
+      "stars": 156703,
+      "forks": 20562,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -14740,7 +14740,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2338,
+      "stars": 2345,
       "forks": 156,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
@@ -14953,7 +14953,7 @@
       "github": "https://github.com/sametcn99/vitepress-mermaid-renderer",
       "homepage": "https://vitepress-mermaid-renderer.vercel.app",
       "language": "TypeScript",
-      "stars": 49,
+      "stars": 50,
       "forks": 4,
       "developer": "sametcn99",
       "installCommand": "npm install vitepress-mermaid-renderer",
@@ -15053,7 +15053,7 @@
       "_store": "Wallnetic",
       "_storeUrl": "",
       "developer": "Fatih Kan",
-      "stars": 14,
+      "stars": 15,
       "forks": 2
     },
     {
