@@ -275,7 +275,7 @@
       "homepage": "https://agentlytics.io",
       "language": "JavaScript",
       "stars": 386,
-      "forks": 39,
+      "forks": 40,
       "installCommand": "npx agentlytics",
       "requirements": "Node.js 20.19+ or 22.12+, macOS",
       "features": [
@@ -517,8 +517,8 @@
       "_store": "TDD Works",
       "_storeUrl": "",
       "developer": "tddworks",
-      "stars": 127,
-      "forks": 15
+      "stars": 126,
+      "forks": 16
     },
     {
       "id": "aso-screenshot-generator",
@@ -552,7 +552,7 @@
       "_store": "Cosmic Meta Digital",
       "_storeUrl": "https://cosmicmeta.ai",
       "developer": "Cosmic Meta Digital",
-      "stars": 17,
+      "stars": 18,
       "forks": 1,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/aso-screenshot-generator.jpg"
     },
@@ -584,8 +584,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2473,
-      "forks": 376,
+      "stars": 2483,
+      "forks": 379,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/awesome-openclaw-agents.jpg"
     },
     {
@@ -1356,8 +1356,8 @@
       "_store": "Mustafa Ergisi",
       "_storeUrl": "",
       "developer": "Mustafa Ergisi",
-      "stars": 2473,
-      "forks": 376,
+      "stars": 2483,
+      "forks": 379,
       "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/crewclaw.jpg"
     },
     {
@@ -1643,7 +1643,7 @@
       "homepage": null,
       "language": "Swift",
       "stars": 84,
-      "forks": 5,
+      "forks": 6,
       "downloadUrl": null,
       "requirements": "macOS 14.0 or later",
       "features": [
@@ -2385,7 +2385,7 @@
       "homepage": "https://findutils.com/en/tools/ai-model-picker/",
       "language": "TypeScript",
       "requirements": "Any modern browser",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/ai-model-picker.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -2394,8 +2394,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-ai-model-picker.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-amortization-calculator",
@@ -2494,7 +2493,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "Flowcharts, sequence diagrams, ER diagrams, class diagrams, architecture diagrams, network topologies, org charts, mind maps, state machines, file trees, CI/CD pipelines, truth tables, and more. The AI auto-detects the best type from your description. Yes. Click anywhere on the canvas to place your cursor and type or edit characters directly. Use Cmd+Z to undo edits. You can also ask the AI to make specific modifications via the chat. Copy to clipboard, download as .txt, .svg (vector), .png (...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/ascii-diagram-generator.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -2503,8 +2502,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-ascii-diagram-generator.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-aspect-ratio-calculator",
@@ -3130,7 +3128,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "The Code Diff Checker supports 20+ languages including JavaScript, TypeScript, Python, Java, C#, C++, Go, Rust, Ruby, PHP, Swift, Kotlin, HTML, CSS, SQL, Shell/Bash, YAML, JSON, XML, and Markdown. Language selection helps with display but the diff algorithm works with any text-based code. No. All comparison happens locally in your browser. Your code never leaves your device, making this tool safe for proprietary and sensitive source code. Side-by-side view shows the original and modified code...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/code-diff-checker.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -3139,8 +3137,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-code-diff-checker.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-code-screenshot-generator",
@@ -3448,6 +3445,33 @@
       "requirements": "Any modern browser",
       "longDescription": "A cron expression is a string of 5 fields representing minute, hour, day of month, month, and day of week. It defines when a scheduled task should run. An asterisk means 'every' or 'any value'. For example, * in the hour field means the task runs every hour. Use */5 in the minute field: */5 * * * *. The /5 syntax means 'every 5 units'.",
       "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/cron-expression-generator.svg",
+      "_source": "olgunozoktas/findutils-tools",
+      "_owner": "olgunozoktas",
+      "_developer": "Olgun Özoktaş",
+      "_store": "FindUtils",
+      "_storeUrl": "https://x.com/codewitholgun",
+      "developer": "Olgun Özoktaş",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "id": "findutils-css-animation-generator",
+      "name": "CSS Animation Generator",
+      "subtitle": "Create custom CSS animations with a visual keyframe timeline editor.",
+      "description": "Create custom CSS animations with a visual keyframe timeline editor. Design animations with drag-and-drop keyframes, multi-property support, easing curves, live preview, and export as CSS, Tailwind...",
+      "category": [
+        "graphics-design",
+        "web"
+      ],
+      "platform": "Web",
+      "price": "Free",
+      "github": "https://github.com/olgunozoktas/findutils-tools",
+      "homepage": "https://findutils.com/en/tools/css-animation-generator/",
+      "language": "TypeScript",
+      "requirements": "Any modern browser",
+      "longDescription": "You can animate transform properties (translate, rotate, scale, skew), opacity, border-radius, background-color, text color, and CSS filters (blur, brightness, contrast, saturate, hue-rotate). Add multiple properties to any keyframe. Click on the timeline to add keyframes, then select a keyframe and add properties using the property panel. Drag keyframes to reposition them on the timeline. Use the settings panel to adjust duration, easing, direction, and repeat count. Yes. Switch to the Tailw...",
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/css-animation-generator.svg",
+      "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
       "_developer": "Olgun Özoktaş",
@@ -3869,7 +3893,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "No. dnpm wraps npm inside a secure Docker container. Every npm command you know still works - dnpm just adds isolation and security layers around it. Yes. Scripts defined in package.json (dev, build, test, etc.) work normally. Lifecycle scripts like postinstall are disabled by default but run in the offline rebuild phase when you use dnpm setup or dnpm ci. The generated setup is npm-focused, but you can modify the Dockerfile and compose file to use yarn or pnpm instead. The security model (re...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/dnpm-configurator.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -3878,8 +3902,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-dnpm-configurator.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-dns-lookup",
@@ -5009,7 +5032,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "No. The AI model runs entirely in your browser using WebGPU or WebAssembly. Your images never leave your device. We use MI-GAN (Mobile Image GAN), a lightweight neural network designed for fast image inpainting. The model is only 28 MB and runs in real-time on modern browsers. The AI model (~28 MB) needs to be downloaded once to your browser. It is cached in your browser's storage, so subsequent visits load instantly.",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/image-eraser.svg",
       "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -5018,8 +5041,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-image-eraser.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-image-resizer",
@@ -5089,7 +5111,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "Drag puzzle pieces from the tray to the grid. Pieces snap into place when dropped near their correct position. In Hard mode, double-tap pieces to rotate them. Yes! Your puzzle is automatically saved. If you close the browser and come back, you can resume where you left off. Easy shows grid outlines and piece numbers. Medium shows only grid outlines. Hard has no outlines and pieces are randomly rotated.",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/image-to-puzzle.svg",
       "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -5098,8 +5120,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-image-to-puzzle.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-imessage-chat-generator",
@@ -6632,7 +6653,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "A Lottie animation is a JSON-based animation format created by Airbnb. Designers create animations in Adobe After Effects and export them using the Bodymovin plugin. The resulting JSON file can be rendered on web, iOS, and Android with small file sizes and perfect scalability. Skia is Google's 2D graphics library used in Chrome, Android, and Flutter. The CanvasKit WASM module includes Skottie, Google's native Lottie renderer. This gives you the same rendering quality as native mobile apps, wi...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/lottie-editor.svg",
       "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -6641,8 +6662,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-lottie-editor.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-macro-calculator",
@@ -7534,7 +7554,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "Photos are stored locally in your browser using IndexedDB. They never leave your device and are not uploaded to any server. Click or tap on any date in the calendar to open the file picker. On mobile, you can also take a photo with your camera. You can drag and drop photos onto dates from your desktop. Yes! Use the Download PDF button to get a print-ready A4 PDF of your calendar. The Download PNG button creates a high-resolution image.",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/photo-calendar.svg",
       "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -7543,8 +7563,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-photo-calendar.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-photo-editor",
@@ -8961,7 +8980,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "You can upload JPEG, PNG, WebP, GIF, and SVG images. The tool works best with square or nearly-square images. Yes! Download your sticker as a transparent PNG and import it into WhatsApp or Telegram sticker packs using their respective sticker maker apps. The stamp border creates a perforated edge effect like a postage stamp. It adds small semicircular cutouts along the border of your sticker.",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/sticker-maker.svg",
       "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -8970,8 +8989,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-sticker-maker.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-stock-average-calculator",
@@ -9095,6 +9113,33 @@
       "requirements": "Any modern browser",
       "longDescription": "This tool extracts embedded subtitle tracks (soft subtitles) from video files. Burned-in subtitles (hard-coded into the video) cannot be extracted. Subtitles are exported in SRT (SubRip) format, which is widely supported by video players and editing software. Yes, if your video contains multiple subtitle tracks, you can select which track to extract using the dropdown menu.",
       "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/subtitle-extractor.svg",
+      "_source": "olgunozoktas/findutils-tools",
+      "_owner": "olgunozoktas",
+      "_developer": "Olgun Özoktaş",
+      "_store": "FindUtils",
+      "_storeUrl": "https://x.com/codewitholgun",
+      "developer": "Olgun Özoktaş",
+      "stars": 0,
+      "forks": 0
+    },
+    {
+      "id": "findutils-svg-animation-generator",
+      "name": "SVG Animation Generator",
+      "subtitle": "Create animated SVGs with a visual editor.",
+      "description": "Create animated SVGs with a visual editor. Build scenes with shapes, characters, and icons, then animate them with transforms, color shifts, and Disney-inspired easing curves. Export as animated SV...",
+      "category": [
+        "graphics-design",
+        "web"
+      ],
+      "platform": "Web",
+      "price": "Free",
+      "github": "https://github.com/olgunozoktas/findutils-tools",
+      "homepage": "https://findutils.com/en/tools/svg-animation-generator/",
+      "language": "TypeScript",
+      "requirements": "Any modern browser",
+      "longDescription": "You can animate position (translate X/Y), rotation, scale, opacity, fill color, stroke color, stroke width, and element-specific attributes like radius, width, and height. Each element can have multiple animations running simultaneously. The tool includes easing presets based on Disney's animation principles: squash-stretch (overshoot), anticipation (pull back before action), follow-through (settle after motion), slow-in-slow-out (natural deceleration), and bounce. Yes. The shape library incl...",
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/svg-animation-generator.svg",
+      "iconEmoji": "🎨",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
       "_developer": "Olgun Özoktaş",
@@ -9595,7 +9640,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "PlantUML supports sequence, class, use case, activity, component, state, object, deployment, timing, and ER diagrams. Mermaid supports flowcharts, sequence, class, state, ER, Gantt, and pie charts. No. PlantUML diagrams are rendered via the PlantUML server. Mermaid diagrams render entirely in your browser. No downloads, plugins, or Java installation required. Yes. You can export diagrams as SVG (vector, scalable) or PNG (raster). You can also copy the diagram as a Markdown image link for use ...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/uml-diagram-editor.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -9604,8 +9649,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-uml-diagram-editor.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-unit-converter",
@@ -10389,7 +10433,7 @@
       "homepage": "https://findutils.com/en/tools/wvw-store-checker/",
       "language": "TypeScript",
       "requirements": "Any modern browser",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/wvw-store-checker.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -10398,8 +10442,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-wvw-store-checker.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-x402-config-generator",
@@ -10418,7 +10461,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "x402 is an open-source payment protocol by Coinbase that activates the HTTP 402 Payment Required status code for programmatic, on-chain payments. It supports stablecoins like USDC across multiple blockchains including Base, Polygon, Solana, Aptos, and Stellar. x402 has official SDKs for TypeScript (Express, Hono, Next.js, Fastify), Go (Gin, net/http), and Python (FastAPI, Flask). Client SDKs are available for fetch, axios, Go net/http, and Python httpx/requests. A facilitator is a service tha...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/x402-config-generator.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -10427,8 +10470,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-x402-config-generator.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-xml-formatter",
@@ -10527,7 +10569,7 @@
       "language": "TypeScript",
       "requirements": "Any modern browser",
       "longDescription": "Yolobox is an open-source CLI tool that runs AI coding agents inside isolated containers. It gives the AI full sudo access and auto-approval mode while protecting your home directory and system files from accidental damage. Yolobox supports Claude Code (with --dangerously-skip-permissions), OpenAI Codex, Google Gemini CLI, GitHub Copilot, and OpenCode. You can also run any custom command inside the container. Yolobox provides container-level isolation that protects against accidental filesyst...",
-      "icon": null,
+      "icon": "https://raw.githubusercontent.com/olgunozoktas/findutils-tools/main/images/wvw-icons/yolobox-configurator.svg",
       "iconEmoji": "🛠️",
       "_source": "olgunozoktas/findutils-tools",
       "_owner": "olgunozoktas",
@@ -10536,8 +10578,7 @@
       "_storeUrl": "https://x.com/codewitholgun",
       "developer": "Olgun Özoktaş",
       "stars": 0,
-      "forks": 0,
-      "_generatedIcon": "https://raw.githubusercontent.com/f/wvw.dev/master/assets/icons/findutils-yolobox-configurator.jpg"
+      "forks": 0
     },
     {
       "id": "findutils-youtube-description-generator",
@@ -12710,8 +12751,8 @@
       "github": "https://github.com/f/prompts.chat",
       "homepage": "https://prompts.chat",
       "language": "TypeScript",
-      "stars": 156872,
-      "forks": 20575,
+      "stars": 157051,
+      "forks": 20592,
       "requirements": "Any modern browser",
       "features": [
         "151K+ GitHub stars",
@@ -12754,8 +12795,8 @@
       "homepage": "https://prompts.chat/book",
       "buyUrl": "https://donate.stripe.com/aFa8wO4NF2S96jDfn4dMI09",
       "language": "TypeScript",
-      "stars": 156872,
-      "forks": 20575,
+      "stars": 157051,
+      "forks": 20592,
       "requirements": "Any modern browser",
       "features": [
         "25 interactive chapters",
@@ -13869,7 +13910,7 @@
       "github": "https://github.com/f/textream",
       "homepage": "https://textream.fka.dev",
       "language": "Swift",
-      "stars": 2357,
+      "stars": 2363,
       "forks": 156,
       "brew": "brew install f/textream/textream",
       "downloadUrl": "https://github.com/f/textream/releases/latest",
